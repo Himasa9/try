@@ -4,5 +4,5 @@ INSERT INTO englishwords
 (word,mean)
 VALUES
 ( 'anyway','とにかく'),
-( 'following','〜に続いて'),
+( 'following','〜に続いて')
 ;

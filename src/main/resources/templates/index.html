@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -14,7 +14,7 @@
     <div><input class="list" type="submit" name="showList" value="一覧表示"/></div>
 </form>
 
-<div th:if="${book} !=null" th:object="${book}">
+<div th:if="${englishWord} !=null" th:object="${englishWord}">
     <table>
         <tr>
             <th>ID</th>
@@ -36,7 +36,7 @@
             <th>英単語</th>
             <th>意味</th>
         </tr>
-        <tr th:each="book:${wordsList}" th:object="${englishword}">
+        <tr th:each="englishWord:${wordsList}" th:object="${englishWord}">
             <td th:text="*{id}">id</td>
             <td th:text="*{word}">英単語</td>
             <td th:text="*{mean}">意味</td>
