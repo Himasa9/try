@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>英単語</p>
+<form action="/word/search" method="post">
+    <label>ID:<input class="input" type="text" name="id"></label><br>
+    <div><input class="search" type="submit" value="検索"/></div>
+</form>
+<form action="/word/search" method="post">
+    <div><input class="list" type="submit" name="showList" value="一覧表示"/></div>
+</form>
+
+<div th:if="${book} !=null" th:object="${book}">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>英単語</th>
+            <th>意味</th>
+        </tr>
+        <tr>
+            <td th:text="*{id}">id</td>
+            <td th:text="*{word}">英単語</td>
+            <td th:text="*{mean}">意味</td>
+        </tr>
+    </table>
+</div>
+
+<div th:if="${wordsList} !=null">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>英単語</th>
+            <th>意味</th>
+        </tr>
+        <tr th:each="book:${wordsList}" th:object="${englishword}">
+            <td th:text="*{id}">id</td>
+            <td th:text="*{word}">英単語</td>
+            <td th:text="*{mean}">意味</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
