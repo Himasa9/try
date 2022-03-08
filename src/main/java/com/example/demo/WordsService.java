@@ -2,8 +2,6 @@ package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.demo.EnWordDao;
-
 import java.util.List;
 
 @Service
@@ -20,7 +18,7 @@ public class WordsService {
     }
 
     //全件取得
-    public List<EnglishWord> getwordsList() {
+    public List<EnglishWord> getWordsList() {
         return this.enWordDao.findAll();
     }
 }

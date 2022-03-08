@@ -24,7 +24,7 @@ public class WordController {
         }
 
         if(showList != null) {
-            List<EnglishWord> wordsList = wordsService.getwordsList();
+            List<EnglishWord> wordsList = wordsService.getWordsList();
             model.addAttribute("wordsList", wordsList);
         }
 
