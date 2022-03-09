@@ -5,20 +5,20 @@
 <mapper namespace="com.example.demo.EnWordDao">
     <select id="findById" resultType="com.example.demo.EnglishWord">
         SELECT
-        id,
-        word,
-        mean
+            id,
+            word,
+            mean
         FROM
-        englishwords
+            englishwords
         WHERE
-        id = #{id}
+            id = #{id}
     </select>
     <select id="findAll" resultType="com.example.demo.EnglishWord">
         SELECT
-        id,
-        word,
-        mean
+            id,
+            word,
+            mean
         FROM
-        englsihwords
+            englishwords
     </select>
 </mapper>
